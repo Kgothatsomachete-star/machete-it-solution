@@ -1,7 +1,9 @@
 from datetime import datetime
 from pathlib import Path
 import csv
+import os
 import re
+import secrets
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 
@@ -11,7 +13,7 @@ DATA_DIR.mkdir(exist_ok=True)
 CSV_FILE = DATA_DIR / "contact_submissions.csv"
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "machete-it-solution-local-key"
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
 
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 
@@ -73,4 +75,8 @@ def submit_contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="127.0.0.1", port=5003)
+    app.run(
+        debug=False,
+        host="127.0.0.1",
+        port=int(os.environ.get("PORT", "5003")),
+    )

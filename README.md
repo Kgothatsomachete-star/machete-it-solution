@@ -31,7 +31,31 @@ Then open:
 
 `http://127.0.0.1:5003`
 
-Run one copy of the app at a time. If port 5000 is already in use, stop the existing website server before starting this one.
+Run one copy of the app at a time. Set the `PORT` environment variable to use a different local port.
+
+## Deploy to Google Cloud Run
+
+The included `Dockerfile` runs Flask with Gunicorn and listens on the port supplied by Cloud Run.
+
+1. Push the project to GitHub.
+2. In the [Google Cloud Console](https://console.cloud.google.com/run), select or create a Google Cloud project and enable billing.
+3. Choose **Create service** and deploy from the GitHub repository, or deploy the source using the Google Cloud CLI:
+
+   ```bash
+   gcloud run deploy machete-it-solution --source . --region REGION --allow-unauthenticated
+   ```
+
+   Replace `REGION` with a nearby Cloud Run region, such as `africa-south1` if available for your project.
+4. In the Cloud Run service settings, configure `SECRET_KEY` as a secret environment variable using Google Secret Manager. Do not commit the key to GitHub.
+5. Open the Cloud Run service URL and test the pages, videos, and contact form before connecting a custom domain.
+
+### Before accepting live enquiries
+
+The contact form currently saves submissions to a local CSV file. Cloud Run's local filesystem is not durable, so submissions can be lost when an instance restarts or scales down. Connect a durable database or storage service before relying on the form for live customer enquiries.
+
+### Connect a custom domain
+
+After the Cloud Run service is deployed and tested, buy a domain from a registrar. In the Cloud Run service's **Networking / Custom domains** settings, map the domain and follow the displayed DNS instructions at your registrar. DNS and certificate provisioning can take time.
 
 ## Replace images
 
