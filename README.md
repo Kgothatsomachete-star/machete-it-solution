@@ -13,6 +13,7 @@ A responsive business website built with **HTML, CSS, Vanilla JavaScript, Python
 - Working Flask contact form
 - Contact enquiries saved to `data/contact_submissions.csv`
 - WhatsApp contact button
+- Embedded Google Map and directions for 8 Hartbees, Elandsfontein Rail
 - Scroll animations and mobile navigation
 - No React, Bootstrap, Tailwind or Node.js required
 
