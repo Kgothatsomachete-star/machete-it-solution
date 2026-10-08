@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Machete IT Solution provides laptop repair, software installation, website design, web application development and practical IT support in South Africa.">
+    <meta name="theme-color" content="#062B78">
+    <meta property="og:title" content="Machete IT Solution | Reliable IT Solutions">
+    <meta property="og:description" content="Reliable, professional IT support and digital solutions.">
+    <meta property="og:type" content="website">
+    <title>Machete IT Solution | IT Support & Digital Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Machete IT Solution home">
+                <img class="brand-logo" src="{{ url_for('static', filename='images/support.jpg') }}" alt="">
+                <span class="brand-copy">
+                    <span class="brand-main">MACHETE</span>
+                    <span class="brand-sub"><strong>IT</strong> SOLUTION</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-wrap" id="main-menu">
+                <ul class="nav-links">
+                    <li><a class="nav-link active" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#work">Our Work</a></li>
+                    <li><a class="nav-link" href="#why-us">Why Us</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a class="nav-cta" href="#contact">Get Support</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero section" id="home">
+            <video class="hero-background-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="{{ url_for('static', filename='videos/hero-background.mp4') }}" type="video/mp4">
+            </video>
+            <div class="hero-shape hero-shape-one"></div>
+            <div class="hero-shape hero-shape-two"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow"><span></span> IT SUPPORT & DIGITAL SOLUTIONS</p>
+                    <h1>Reliable IT solutions <em>that work.</em></h1>
+                    <p class="hero-text">We monitor, maintain and improve your technology so you can focus on your business.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Get Support <span>→</span></a>
+                        <a class="btn btn-outline" href="#services">View Services</a>
+                    </div>
+                    <div class="trust-line">
+                        <span class="check">✓</span>
+                        <span>Reliable. Professional. Solutions.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="poster-strip">
+            <div class="container poster-strip-inner">
+                <span>YOUR TECHNOLOGY PROBLEMS</span>
+                <strong>OUR EXPERT SOLUTIONS.</strong>
+                <span class="strip-line"></span>
+                <span class="strip-location">Serving Elandsfontein & surrounding areas</span>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="container about-grid">
+                <div class="about-images reveal">
+                    <div class="image-main"><img src="{{ url_for('static', filename='images/laptop-repair.jpg') }}" alt="Laptop being repaired by a technician"></div>
+                    <div class="image-small"><img src="{{ url_for('static', filename='images/coding.jpg') }}" alt="Developer working on a laptop"></div>
+                    <div class="image-dot"></div>
+                </div>
+                <div class="about-copy reveal delay-1">
+                    <p class="section-kicker">MEET THE FOUNDER</p>
+                    <h2>Built with curiosity. <span>Driven by solutions.</span></h2>
+                    <p>Machete IT Solution was founded by Machete Kgothatso Daniel, who comes from Vuwani in Limpopo. His interest in technology and problem-solving inspired him to build a business focused on practical IT support and useful digital solutions for individuals, students and businesses.</p>
+                    <p>Kgothatso studied Information Technology at Boston City Campus and is continuing his studies as a final-year Diploma in Systems Development student. He is developing his skills in software development, web technologies and systems analysis while building solutions to real-world problems.</p>
+                    <div class="feature-list">
+                        <div class="feature"><span>✓</span><div><strong>Technologies</strong><small>Java, JSP, Servlets, SQL, MySQL, HTML, CSS, Android development and Microsoft Excel.</small></div></div>
+                        <div class="feature"><span>✓</span><div><strong>Software project</strong><small>Created an online pharmacy application with product browsing, customer accounts, ordering and inventory-management features.</small></div></div>
+                        <div class="feature"><span>✓</span><div><strong>Data and business analysis</strong><small>Built Excel dashboards and reports using financial calculations and data visualisation.</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="section-kicker">WHAT WE DO</p>
+                        <h2>Services built around <span>your needs.</span></h2>
+                    </div>
+                    <p>From fixing the laptop on your desk to building the website your business needs, we keep technology practical.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card reveal" data-service="laptop">
+                        <div class="service-number">01</div>
+                        <div class="service-icon laptop-icon">▱</div>
+                        <h3>Fixing Laptops</h3>
+                        <p>We diagnose and repair hardware and performance issues to get your laptop running like new.</p>
+                        <button class="learn-more" type="button">Learn more <span>→</span></button>
+                    </article>
+                    <article class="service-card reveal delay-1" data-service="software">
+                        <div class="service-number">02</div>
+                        <div class="service-icon">⚙</div>
+                        <h3>Software Installation</h3>
+                        <p>We install and configure operating systems, drivers and essential software for smooth performance.</p>
+                        <button class="learn-more" type="button">Learn more <span>→</span></button>
+                    </article>
+                    <article class="service-card reveal delay-2" data-service="website">
+                        <div class="service-number">03</div>
+                        <div class="service-icon">◎</div>
+                        <h3>Website Design</h3>
+                        <p>We create modern, responsive and user-friendly websites tailored to your business needs.</p>
+                        <button class="learn-more" type="button">Learn more <span>→</span></button>
+                    </article>
+                    <article class="service-card reveal delay-3" data-service="webapp">
+                        <div class="service-number">04</div>
+                        <div class="service-icon">&lt;/&gt;</div>
+                        <h3>Web App Design</h3>
+                        <p>We build custom web applications that are fast, secure and scalable to grow with your business.</p>
+                        <button class="learn-more" type="button">Learn more <span>→</span></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section work-section" id="work">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><p class="section-kicker">OUR WORK</p><h2>Technology you can <span>see.</span></h2></div>
+                    <p>A visual look at the kind of technical and digital work behind Machete IT Solution.</p>
+                </div>
+                <div class="work-grid">
+                    <button class="work-item work-large reveal" data-image="laptop-repair.jpg" data-title="Laptop Repair" type="button">
+                        <img src="{{ url_for('static', filename='images/laptop-repair.jpg') }}" alt="Laptop repair workspace">
+                        <span><strong>Laptop Repair</strong><small>Diagnostics & maintenance</small></span>
+                    </button>
+                    <button class="work-item reveal delay-1" data-image="coding.jpg" data-title="Web Development" type="button">
+                        <img src="{{ url_for('static', filename='images/coding.jpg') }}" alt="Web development on a laptop">
+                        <span><strong>Web Development</strong><small>Modern digital solutions</small></span>
+                    </button>
+                    <button class="work-item reveal delay-2" data-image="website-design.jpg" data-title="Website Design" type="button">
+                        <img src="{{ url_for('static', filename='images/website-design.jpg') }}" alt="Responsive website design on multiple devices">
+                        <span><strong>Website Design</strong><small>Responsive business websites</small></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section video-section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><p class="section-kicker">SEE WHAT WE DO</p><h2>Work in <span>motion.</span></h2></div>
+                    <p>Short visual previews created from the Machete IT Solution brand imagery. Replace these clips with your own service videos anytime.</p>
+                </div>
+                <div class="video-grid">
+                    <article class="video-card reveal">
+                        <div class="video-wrap"><video muted loop playsinline controls preload="metadata" poster="{{ url_for('static', filename='images/laptop-repair.jpg') }}"><source src="{{ url_for('static', filename='videos/laptop-repair.mp4') }}" type="video/mp4"></video></div>
+                        <h3>Laptop Repair</h3><p>Careful diagnostics, maintenance and practical repair support.</p>
+                    </article>
+                    <article class="video-card reveal delay-1">
+                        <div class="video-wrap"><video muted loop playsinline controls preload="metadata" poster="{{ url_for('static', filename='images/coding.jpg') }}"><source src="{{ url_for('static', filename='videos/web-development.mp4') }}" type="video/mp4"></video></div>
+                        <h3>Web Development</h3><p>Clean, responsive digital experiences for modern businesses.</p>
+                    </article>
+                    <article class="video-card reveal delay-2">
+                        <div class="video-wrap"><video muted loop playsinline controls preload="metadata" poster="{{ url_for('static', filename='images/website-design.jpg') }}"><source src="{{ url_for('static', filename='videos/it-support.mp4') }}" type="video/mp4"></video></div>
+                        <h3>IT Support</h3><p>Technology support designed around real-world problems.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section why-section" id="why-us">
+            <div class="container why-grid">
+                <div class="why-copy reveal">
+                    <p class="section-kicker">WHY CHOOSE US</p>
+                    <h2>Good technology should make life <span>easier.</span></h2>
+                    <p>We keep our approach simple: understand the problem, communicate clearly and deliver a solution that makes sense.</p>
+                    <div class="why-list">
+                        <div><span>✓</span> Reliable service</div>
+                        <div><span>✓</span> Professional solutions</div>
+                        <div><span>✓</span> Practical IT support</div>
+                        <div><span>✓</span> Modern web solutions</div>
+                        <div><span>✓</span> Customer-focused approach</div>
+                        <div><span>✓</span> Affordable technology solutions</div>
+                    </div>
+                </div>
+                <div class="why-visual reveal delay-1">
+                    <img src="{{ url_for('static', filename='images/support.jpg') }}" alt="Professional computer and IT support equipment">
+                    <div class="why-stamp">MACHETE<br><strong>IT SOLUTION</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-inner">
+                <div><p class="section-kicker">READY WHEN YOU ARE</p><h2>Need help with your technology?</h2><p>Whether your laptop needs attention or your business needs a professional website, we're here to help.</p></div>
+                <a class="btn btn-yellow" href="#contact">Get Support <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="section-kicker">CONTACT US</p>
+                    <h2>Let's solve your <span>next tech problem.</span></h2>
+                    <p>Tell us what you need and we'll help you work out the next step.</p>
+                    <div class="contact-details">
+                        <a href="tel:+27818485311"><span>☎</span><div><small>PHONE</small><strong>+27 81 848 5311</strong></div></a>
+                        <a href="mailto:Kgothatso.machete@outlook.com"><span>✉</span><div><small>EMAIL</small><strong>Kgothatso.machete@outlook.com</strong></div></a>
+                        <div><span>⌖</span><div><small>LOCATION</small><strong>Elandsfontein, South Africa</strong></div></div>
+                    </div>
+                    <a class="whatsapp-link" href="https://wa.me/27818485311?text=Hello%20Machete%20IT%20Solution%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
+                </div>
+
+                <div class="contact-card reveal delay-1">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <div class="flash-area" aria-live="polite">
+                                {% for category, message in messages %}
+                                    <div class="flash {{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    <form action="{{ url_for('submit_contact') }}" method="post" id="contact-form" novalidate>
+                        <div class="form-row">
+                            <label>Full Name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+                            <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Phone Number<input type="tel" name="phone" autocomplete="tel" placeholder="+27..."></label>
+                            <label>Service Required<select name="service"><option value="">Select a service</option><option>Laptop Repair</option><option>Software Installation</option><option>Website Design</option><option>Web App Design</option><option>General IT Support</option></select></label>
+                        </div>
+                        <label>Message<textarea name="message" rows="6" required placeholder="Tell us what you need help with..."></textarea></label>
+                        <p class="form-error" id="form-error" role="alert"></p>
+                        <button class="btn btn-primary form-submit" type="submit">Send Message <span>→</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><a class="brand" href="#home"><span class="brand-main">MACHETE</span><span class="brand-sub"><strong>IT</strong> SOLUTION</span></a><p>Reliable. Professional. Solutions.</p></div>
+            <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#contact">Contact</a></div>
+            <div><h3>Services</h3><a href="#services">Laptop Repair</a><a href="#services">Software Installation</a><a href="#services">Website Design</a><a href="#services">Web App Design</a></div>
+            <div><h3>Contact</h3><a href="tel:+27818485311">+27 81 848 5311</a><a href="mailto:Kgothatso.machete@outlook.com">Kgothatso.machete@outlook.com</a><span>Elandsfontein, South Africa</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 Machete IT Solution. All Rights Reserved.</span><span>Built with practical technology.</span></div>
+    </footer>
+
+    <button class="back-top" type="button" aria-label="Back to top">↑</button>
+
+    <div class="modal" id="service-modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close">×</button>
+            <p class="section-kicker">SERVICE DETAILS</p>
+            <h2 id="modal-title">Service</h2>
+            <p id="modal-description"></p>
+            <ul id="modal-list"></ul>
+            <a class="btn btn-primary" href="#contact" id="modal-contact">Enquire about this service <span>→</span></a>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+        <button class="lightbox-prev" type="button" aria-label="Previous image">‹</button>
+        <figure><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
+        <button class="lightbox-next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
